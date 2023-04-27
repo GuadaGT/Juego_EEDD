@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E3B63EA-6BC2-4726-ABB6-DFA07AD52330}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Proyecto_Football_GGT</RootNamespace>
+    <AssemblyName>Proyecto_Football_GGT</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clasificación.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clasificación.Designer.cs">
+      <DependentUpon>Clasificación.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipo.cs" />
+    <Compile Include="Equipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos.Designer.cs">
+      <DependentUpon>Equipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jugadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jugadores.Designer.cs">
+      <DependentUpon>Jugadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ganadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ganadores.Designer.cs">
+      <DependentUpon>Ganadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jugador.cs" />
+    <Compile Include="Partido.cs" />
+    <Compile Include="Partidos y Resultados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Partidos y Resultados.Designer.cs">
+      <DependentUpon>Partidos y Resultados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resultado.cs" />
+    <Compile Include="Torneo_football.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Torneo_football.Designer.cs">
+      <DependentUpon>Torneo_football.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Clasificación.resx">
+      <DependentUpon>Clasificación.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos.resx">
+      <DependentUpon>Equipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jugadores.resx">
+      <DependentUpon>Jugadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ganadores.resx">
+      <DependentUpon>Ganadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Partidos y Resultados.resx">
+      <DependentUpon>Partidos y Resultados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Torneo_football.resx">
+      <DependentUpon>Torneo_football.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\DataSources\Clasificación.datasource" />
+    <None Include="Properties\DataSources\Equipos_y_Jugadores.datasource" />
+    <None Include="Properties\DataSources\Ganadores.datasource" />
+    <None Include="Properties\DataSources\Partidos_y_Resultados.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\Proyecto_Football_GGT.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\Proyecto_Football_GGT.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\Torneo_football.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Inazuma-Eleven.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\legend-of-vox-machina-1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
